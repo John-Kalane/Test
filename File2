@@ -1,0 +1,34 @@
+int main(int argc, char** argv)
+{
+009418A0  push        ebp  
+009418A1  mov         ebp,esp  
+009418A3  sub         esp,0C0h  
+009418A9  push        ebx  
+009418AA  push        esi  
+009418AB  push        edi  
+009418AC  lea         edi,[ebp-0C0h]  
+009418B2  mov         ecx,30h  
+009418B7  mov         eax,0CCCCCCCCh  
+009418BC  rep stos    dword ptr es:[edi]  
+    std::cout << POW((unsigned __int64)2, 63) << std::endl;
+009418BE  mov         esi,esp  
+009418C0  push        offset std::endl<char,std::char_traits<char> > (0941064h)  
+009418C5  push        3Fh  
+009418C7  push        0  
+009418C9  push        2  
+009418CB  call        POW<unsigned __int64,int> (09410FAh) 
+009418D0  add         esp,0Ch  
+009418D3  mov         edi,esp  
+009418D5  push        edx  
+009418D6  push        eax  
+009418D7  mov         ecx,dword ptr [_imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A (094A098h)]  
+009418DD  call        dword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (094A0ACh)]  
+009418E3  cmp         edi,esp  
+009418E5  call        __RTC_CheckEsp (0941127h)  
+009418EA  mov         ecx,eax  
+009418EC  call        dword ptr [__imp_std::basic_ostream<char,std::char_traits<char> >::operator<< (094A0B0h)]  
+009418F2  cmp         esi,esp  
+009418F4  call        __RTC_CheckEsp (0941127h)  
+    return 0;
+009418F9  xor         eax,eax  
+}
