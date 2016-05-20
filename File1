@@ -1,0 +1,12 @@
+#include <iostream>
+template<typename base_t, typename expo_t>
+constexpr base_t POW(base_t base, expo_t expo)
+{ 
+    return (expo != 0) ? base * POW(base, expo - 1) : 1;
+}
+
+int main(int argc, char** argv)
+{
+    std::cout << POW((unsigned __int64)2, 63) << std::endl;
+    return 0;
+}
