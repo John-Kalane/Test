@@ -32,3 +32,6 @@ int main(int argc, char** argv)
     return 0;
 009418F9  xor         eax,eax  
 }
+
+Outro teste
+
